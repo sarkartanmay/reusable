@@ -3,7 +3,7 @@ version: '3.4'
 services:
 
   application_db:
-    image: mysql:5.7
+    image: mysql:${MYSQL_VERSION}
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}

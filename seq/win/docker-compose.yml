@@ -1,0 +1,10 @@
+version: '3'
+services:
+  seq:
+    image: datalust/seq:latest
+    ports:
+      - ${PUBLIC_SEQ_PORT}:80
+    environment:
+      ACCEPT_EULA: "Y"
+    volumes:
+      - ${SEQ_VOLUME_DATA}:/data

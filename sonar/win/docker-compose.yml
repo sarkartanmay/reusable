@@ -12,11 +12,11 @@ services:
     ports:
       - ${PUBLIC_SQ_PORT}:9000
     volumes:
-      - "X:/doc_vol/sonar/conf:/opt/sonarqube/conf"
-      - "X:/doc_vol/sonar/data:/opt/sonarqube/data"
-      - "X:/doc_vol/sonar/extensions:/opt/sonarqube/extensions"
-      - "X:/doc_vol/sonar/logs:/opt/sonarqube/logs"
-      - "X:/doc_vol/sonar/temp:/opt/sonarqube/temp"
+      - ${SONAR_PATH}/conf:/opt/sonarqube/conf
+      - ${SONAR_PATH}/data:/opt/sonarqube/data
+      - ${SONAR_PATH}/extensions:/opt/sonarqube/extensions
+      - ${SONAR_PATH}/logs:/opt/sonarqube/logs
+      - ${SONAR_PATH}/temp:/opt/sonarqube/temp
 
   sonar_db:
     image: postgres:13
@@ -25,6 +25,6 @@ services:
       POSTGRES_PASSWORD: ${PG_PASSWORD}
       POSTGRES_DB: ${PG_DATABASE}
     volumes:
-      - "X:/doc_vol/sonar/db:/var/lib/postgresql"
-      - "X:/doc_vol/sonar/dbdata:/var/lib/postgresql/data"
+      - ${SONAR_PATH}/postgresql:/var/lib/postgresql
+      - ${SONAR_PATH}/postgresql_dbdata:/var/lib/postgresql/data
 

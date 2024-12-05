@@ -1,3 +1,11 @@
+# DAMP
+- Docker
+- Apache
+- MySql
+- Php
+
+Apache + Php => tanmaysarkar/damp_php:1.0.0
+
 # Information 
 
 # Local
@@ -30,4 +38,9 @@ docker push tanmaysarkar/damp_php:1.0.0
 ## tanmaysarkar/damp_php
 
 ### 1.0.0
-- PHP - 7.2-apache
+- PHP - 7.2-apache 
+  - docker-php-ext-install
+  - mysqli
+  - pdo
+  - pdo_mysql
+  

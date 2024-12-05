@@ -3,7 +3,7 @@ version: '3.4'
 services:
 
   damp_mysql:
-    image: mysql:5.7
+    image: mysql:${MYSQL_VERSION}
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
@@ -24,7 +24,7 @@ services:
       - ${PUBLIC_PMA_PORT}:80
 
   damp_php:
-    image: tanmaysarkar/damp_php:1.0.0
+    image: tanmaysarkar/damp_php:${DAMP_PHP_VERSION}
     volumes:
         - ${LOCAL_WWW_PATH}:/var/www/html/
         - ${LOCAL_PHP_LOG_PATH}:/var/www/html/logs

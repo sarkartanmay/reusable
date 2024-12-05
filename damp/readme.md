@@ -31,5 +31,3 @@ docker push tanmaysarkar/damp_php:1.0.0
 
 ### 1.0.0
 - PHP - 7.2-apache
-- MYSQL - 5.7
-- PhpMyAdmin - 5.2.1

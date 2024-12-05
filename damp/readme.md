@@ -31,16 +31,29 @@ Create a new Stack
 
 # Help 
 ```
-docker build -t tanmaysarkar/damp_php:1.0.0 -f Dockerfile.php.local .
+docker build -t tanmaysarkar/damp_php:1.2.0 -f Dockerfile.php.local .
 
-docker push tanmaysarkar/damp_php:1.0.0
+docker push tanmaysarkar/damp_php:1.2.0
 ```
 ## tanmaysarkar/damp_php
 
 ### 1.0.0
-- PHP - 7.2-apache 
+- PHP - 7.2-apache (Upto mysql 5.7)
   - docker-php-ext-install
   - mysqli
   - pdo
   - pdo_mysql
   
+### 1.1.0
+- PHP - 7.4-apache (Upto mysql 8.4.3)
+  - docker-php-ext-install
+  - mysqli
+  - pdo
+  - pdo_mysql
+  
+### 1.2.0
+- PHP - 8.4.1-apache (Upto mysql 8.4.3)
+  - docker-php-ext-install
+  - mysqli
+  - pdo
+  - pdo_mysql  

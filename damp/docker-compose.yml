@@ -12,8 +12,7 @@ services:
       MYSQL_ROOT_HOST: '%'
     volumes:
       - ${LOCAL_DB_PATH}:/var/lib/mysql
-    ports:
-      - ${LOCAL_DB_PORT}:3306
+    
 
   damp_phpmyadmin:
     image: phpmyadmin/phpmyadmin

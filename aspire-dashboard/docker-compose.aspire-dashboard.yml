@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  aspire-dashboard:
+    image: mcr.microsoft.com/dotnet/aspire-dashboard:9.0
+    ports:
+      - 18888:18888
+      - 4317:18889

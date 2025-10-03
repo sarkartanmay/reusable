@@ -1,0 +1,9 @@
+{
+	"servers": {		
+		"local-docker-mcp-server-01": {
+				"url": "http://localhost:3333/sse",
+				"type": "http"
+			}
+		},
+	"inputs": []
+}

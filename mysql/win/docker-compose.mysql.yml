@@ -20,4 +20,4 @@ services:
 
 networks:
   internal_app_communication:
-    driver: overlay
+    external: true

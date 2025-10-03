@@ -20,4 +20,3 @@ services:
 
 networks:
   internal_app_communication:
-    driver: bridge

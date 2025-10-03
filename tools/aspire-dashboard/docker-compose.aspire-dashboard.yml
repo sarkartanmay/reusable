@@ -7,3 +7,8 @@ services:
       - 18888:18888
       - 4317:18889
       - 4318:18890
+    networks:
+      - internal_app_communication
+networks:
+  internal_app_communication:
+    external: true  

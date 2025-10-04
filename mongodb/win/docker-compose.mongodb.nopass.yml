@@ -9,7 +9,7 @@ services:
     environment:
       - MONGO_INITDB_DATABASE=product
     volumes:
-      - mongo_db_data2:/data/db
+      - ${LOCAL_PATH}:/data/db
     networks:
       - internal_app_communication
   
@@ -27,8 +27,6 @@ services:
       - internal_app_communication
     depends_on:
       - mongo_db
-volumes:
-  mongo_db_data2:  
 
 networks:
   internal_app_communication:

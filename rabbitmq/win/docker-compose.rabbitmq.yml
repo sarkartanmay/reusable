@@ -14,8 +14,7 @@ services:
       - ${Local_RBMQ_LOG}:/var/log/rabbitmq
     networks:
       - internal_app_communication
-    env_file:
-      - stack.env
+
 
 networks:
   internal_app_communication:

@@ -13,9 +13,9 @@ services:
       - ${Local_RBMQ_Data}:/var/lib/rabbitmq/
       - ${Local_RBMQ_LOG}:/var/log/rabbitmq
     networks:
-      - internal_app_communication
+      - ${NETWORK_NAME}
 
 
 networks:
-  internal_app_communication:
+  ${NETWORK_NAME}:
     external: true   

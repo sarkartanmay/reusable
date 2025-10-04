@@ -1,10 +1,8 @@
 # Tools Config
 
-## phpmyadmin
 
-[http://localhost:9950](http://localhost:9950)
-
-
-## Aspire Dashboard 
-
-[http://localhost:18888](http://localhost:18888)
+| Application | URL | Default Port |
+| :----------- | :------------: | ------------: |
+| phpmyadmin     | [http://localhost:9950](http://localhost:9950)       | -       |
+| Aspire      | [http://localhost:9951](http://localhost:9951)        | 18888       |
+| RabbitMQ      | [http://localhost:9952](http://localhost:9952)        | 15672       |

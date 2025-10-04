@@ -11,8 +11,7 @@ services:
     volumes:
       - ${LOCAL_PATH}:/data/db
     networks:
-      - internal_app_communication
-  
+      - ${DOCKER_NETWORK_NAME}  
   mongo-express:
     image: mongo-express
     ports:
@@ -24,10 +23,11 @@ services:
       - ME_CONFIG_BASICAUTH_PASSWORD=admin
       - ME_CONFIG_MONGODB_PORT=27017
     networks:
-      - internal_app_communication
+      - ${DOCKER_NETWORK_NAME}
     depends_on:
       - mongo_db
 
 networks:
-  internal_app_communication:
+  docker_network:
+    name: ${DOCKER_NETWORK_NAME}
     external: true

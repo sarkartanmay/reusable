@@ -1,16 +1,15 @@
 version: "3.9"
 
 services:
-  redis:
-    image: redis:7.4
-    restart: always
+  tools_redisinsight:
+    image: redislabs/redisinsight:latest
     ports:
-      - 6379:6379
+      - ${PUBLIC_RI_PORT}:5540
     volumes:
-      - ${LOCAL_REDIS_PATH}:/data
-    command: ["redis-server", "--appendonly", "yes"]
+      - ${LOCAL_RI_PATH}:/db
     networks:
       - internal_app_communication
+
 
 networks:
   internal_app_communication:

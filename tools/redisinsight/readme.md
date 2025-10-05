@@ -10,5 +10,5 @@ refs/heads/develop
 ```
 ## Compose path*
 ```
-redis/win/docker-compose.redis.yml
+tools/redisinsight/docker-compose.redisinsight.yml
 ```

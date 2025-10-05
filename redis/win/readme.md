@@ -10,5 +10,5 @@ refs/heads/develop
 ```
 ## Compose path*
 ```
-mongodb/win/docker-compose.mongodb.nopass.yml
+redis/win/docker-compose.redis.yml
 ```

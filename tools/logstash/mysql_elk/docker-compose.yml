@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  logstash:
+    image: tanmaysarkar/logstash-mysql:1.0.0
+    depends_on:
+      - mysql_db
+      - elasticsearch
+    volumes:
+      - "G:/doc_vol/conf/:/usr/share/logstash/pipeline"
+    environment:
+      - LS_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "5044:5044"
+    networks:
+      - internal_app_communication  
+
+networks:
+  internal_app_communication:
+    external: true

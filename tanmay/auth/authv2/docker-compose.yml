@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  auth:
+    image: tanmaysarkar/authperm:${APP_AUTH_VERSION}
+    ports:
+      - ${APP_AUTH_PORT}:8080
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${APP_AUTH_ENV}
+      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTLP_ENDPOINT}
+      - OTEL_EXPORTER_OTLP_PROTOCOL=${OTLP_PROTOCOL}
+      - ApplicationOptions:AppName=${APP_AUTH_NAME}
+      - ConnectionStrings__DefaultConnection=${APP_AUTH_DB_CONFIG}
+      - Jwt:Key=${JWT_KEY}
+      - Jwt:Issuer=${JWT_ISS}
+      - Jwt:Audience=${JWT_AUD}
+    networks:
+      - internal_app_communication
+
+networks:
+  internal_app_communication:
+    external: true

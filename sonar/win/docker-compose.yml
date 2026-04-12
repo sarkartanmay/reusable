@@ -2,7 +2,7 @@ version: "3"
 
 services:
   sonarqube:
-    image: sonarqube:lts-community
+    image: sonarqube:community
     depends_on:
       - sonar_db
     environment:

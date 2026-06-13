@@ -9,8 +9,8 @@ services:
     ports:
       - ${PUBLIC_PMA_PORT}:80
     networks:
-      - internal_app_communication
+      - tools_network
 
 networks:
-  internal_app_communication:
+  tools_network:
     external: true

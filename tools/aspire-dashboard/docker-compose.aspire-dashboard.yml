@@ -8,7 +8,7 @@ services:
       - 4317:18889
       - 4318:18890
     networks:
-      - internal_app_communication
+      - tools_network
 networks:
-  internal_app_communication:
+  tools_network:
     external: true  

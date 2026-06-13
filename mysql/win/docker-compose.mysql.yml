@@ -16,8 +16,8 @@ services:
 
     command: --default-authentication-plugin=mysql_native_password
     networks:
-      - internal_app_communication  
+      - tools_network  
 
 networks:
-  internal_app_communication:
+  tools_network:
     external: true
